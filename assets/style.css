@@ -1,8 +1,10 @@
 header {
   padding: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #DCDCDC	;
-    color: #418FDE;
+  background-color: #a3c2e0;
+  color: #418FDE;
+  position: sticky;
+  top: 0.5px;
 }
 
 header h1 {
@@ -15,7 +17,7 @@ header h1 .Ibr {
 }
 
 header nav {
-padding-top: 10px;
+  padding-top: 10px;
   margin-right: 20px;
   float: right;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -23,10 +25,11 @@ padding-top: 10px;
 }
 
 header nav ul li {
-  display: inline;
-  margin-left: 25px;
   display: inline-block;
+  margin-left: 25px;
   color: white;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
 }
 
 a:link {
@@ -42,19 +45,40 @@ a:hover {
   background-color: #418FDE;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   text-decoration: none;
+}
+
+#about {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  height: 95%;
+  width: 95%;
+}
+
+#about-me {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 25px;
+  text-decoration-style: bold;
+  flex-grow: 1
+}
+
+#about-description {
+  font-size: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .contact ul li {
   margin-left: 15px;
-  display: inline-block;
+  display: inline;
   color: #418FDE;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
 }
 
-/* STARTER CODE BELOW */ 
+/* STARTER CODE BELOW */
 
 h1,
 h2,
@@ -66,15 +90,70 @@ h6 {
 }
 
 
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    line-height: 1.5;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
 
-  
-  p {
-    margin: 0;
-  }
-  
+p {
+  margin: 0;
+}
+
+
+/* USE 
+
+USE the justify-content property, which aligns items horizontally and accepts the following values:
+
+flex-start: Items align to the left side of the container.
+flex-end: Items align to the right side of the container.
+center: Items align at the center of the container.
+space-between: Items display with equal spacing between them.
+space-around: Items display with equal spacing around them.
+
+e.g. 
+justify-content: space-between
+
+-----
+
+USE align-items to help the frogs get to the bottom of the pond. This CSS property aligns items vertically and accepts the following values:
+
+flex-start: Items align to the top of the container.
+flex-end: Items align to the bottom of the container.
+center: Items align at the vertical center of the container.
+baseline: Items display at the baseline of the container.
+stretch: Items are stretched to fit the container.
+
+-----
+
+USE the flex-wrap property, which accepts the following values:
+
+nowrap: Every item is fit to a single line.
+wrap: Items wrap around to additional lines.
+wrap-reverse: Items wrap around to additional lines in reverse.
+
+-----
+
+We can apply the ORDER property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).
+
+-----
+
+The two properties flex-direction and flex-wrap are used so often together that the shorthand property flex-flow was created to combine them. This shorthand property accepts the value of the two properties separated by a space.
+For example, you can use flex-flow: row wrap to set rows and wrap them.
+
+-----
+
+USE align-content to set how multiple lines are spaced apart from each other. This property takes the following values:
+
+flex-start: Lines are packed at the top of the container.
+flex-end: Lines are packed at the bottom of the container.
+center: Lines are packed at the vertical center of the container.
+space-between: Lines display with equal spacing between them.
+space-around: Lines display with equal spacing around them.
+stretch: Lines are stretched to fit the container.
+
+
+This can be confusing, but align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. When there is only one line, align-content has no effect.
+
+*/
