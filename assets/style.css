@@ -1,3 +1,11 @@
+/* STARTER CODE BELOW */
+
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
 header {
   padding: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -12,7 +20,7 @@ header h1 {
   font-size: 48px;
 }
 
-header h1 .Ibr {
+header h1 .n-Ib {
   color: white;
 }
 
@@ -32,25 +40,27 @@ header nav ul li {
   text-decoration-style: solid;
 }
 
-a:link {
+nav a:link {
   color: white;
 }
 
-a:visited {
+nav a:visited {
   color: #418FDE;
 }
 
-a:hover {
+nav a:hover {
   color: white;
   background-color: #418FDE;
 }
 
-a:link,
-a:visited {
+nav a:link,
+nav a:visited {
   text-decoration: none;
 }
 
-#about {
+/* about-me */
+
+.sub-heading {
   display: flex;
   flex-direction: row;
   padding: 20px;
@@ -58,102 +68,99 @@ a:visited {
   width: 95%;
 }
 
-#about-me {
+.sub-heading-text {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 25px;
-  text-decoration-style: bold;
-  flex-grow: 1
+  font-weight: bolder;
+  border-right: solid black;
+  border-width: thin medium;
+  padding: 10px;
+  margin: 5px;
 }
 
-#about-description {
-  font-size: 15px;
+.sub-heading-description {
+  font-size: 18px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.contact ul li {
-  margin-left: 15px;
-  display: inline;
+/* portfolio container */
+
+.sub-heading2 {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+#WorkGrid2 {
+  flex-grow: 25;
+  height: 700px;
+  display: grid;
+  margin: 0px 5%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "Surf-Report Surf-Report"
+    "Surf-Report Surf-Report"
+    "Surf-Report Surf-Report"
+    "LED-Wall Calculator"
+    "Pastel-Puzzles Run-Buddy";
+}
+
+#Surf-Report {
+  grid-area: Surf-Report;
+  background-image: url("../assets/images/02-portfolio-4.jpg");
+}
+
+#LED-Wall {
+  grid-area: LED-Wall;
+  background-image: url("../assets/images/02-portfolio-1.jpg");
+}
+
+#Calculator {
+  grid-area: Calculator;
+  background-image: url("../assets/images/02-portfolio-2.jpg");
+}
+
+#Pastel-Puzzles {
+  grid-area: Pastel-Puzzles;
+  background-image: url("../assets/images/02-portfolio-3.jpg");
+}
+
+
+#Run-Buddy {
+  grid-area: Run-Buddy;
+  background-image: url("../assets/images/02-run-buddy.jpg");
+}
+
+.WorkGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  align-content: end;
+  border-color: skyblue;
+  border-width: 100px;
+}
+
+/* sub-heading */
+
+.sub-heading a {
   color: #418FDE;
+  font-weight: bold;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  text-decoration-line: underline;
+  text-decoration-style: solid #418FDE;
+  text-underline-offset: 10px;
 }
 
-/* STARTER CODE BELOW */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 10px;
+.sub-heading a:hover {
+  color: #053769;
 }
 
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+.sub-heading a:visited {
+  text-decoration: none;
 }
-
-p {
-  margin: 0;
-}
-
-
-/* USE 
-
-USE the justify-content property, which aligns items horizontally and accepts the following values:
-
-flex-start: Items align to the left side of the container.
-flex-end: Items align to the right side of the container.
-center: Items align at the center of the container.
-space-between: Items display with equal spacing between them.
-space-around: Items display with equal spacing around them.
-
-e.g. 
-justify-content: space-between
-
------
-
-USE align-items to help the frogs get to the bottom of the pond. This CSS property aligns items vertically and accepts the following values:
-
-flex-start: Items align to the top of the container.
-flex-end: Items align to the bottom of the container.
-center: Items align at the vertical center of the container.
-baseline: Items display at the baseline of the container.
-stretch: Items are stretched to fit the container.
-
------
-
-USE the flex-wrap property, which accepts the following values:
-
-nowrap: Every item is fit to a single line.
-wrap: Items wrap around to additional lines.
-wrap-reverse: Items wrap around to additional lines in reverse.
-
------
-
-We can apply the ORDER property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).
-
------
-
-The two properties flex-direction and flex-wrap are used so often together that the shorthand property flex-flow was created to combine them. This shorthand property accepts the value of the two properties separated by a space.
-For example, you can use flex-flow: row wrap to set rows and wrap them.
-
------
-
-USE align-content to set how multiple lines are spaced apart from each other. This property takes the following values:
-
-flex-start: Lines are packed at the top of the container.
-flex-end: Lines are packed at the bottom of the container.
-center: Lines are packed at the vertical center of the container.
-space-between: Lines display with equal spacing between them.
-space-around: Lines display with equal spacing around them.
-stretch: Lines are stretched to fit the container.
-
-
-This can be confusing, but align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. When there is only one line, align-content has no effect.
-
-*/
