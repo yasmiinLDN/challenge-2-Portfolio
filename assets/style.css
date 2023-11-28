@@ -4,6 +4,7 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  background-color: #f0f5fa;
 }
 
 header {
@@ -11,7 +12,8 @@ header {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: #a3c2e0;
   color: #418FDE;
-  position: sticky;
+  position:sticky;
+  z-index: +1;
   top: 0.5px;
 }
 
@@ -40,10 +42,6 @@ header nav ul li {
   text-decoration-style: solid;
 }
 
-nav a:link {
-  color: white;
-}
-
 nav a:visited {
   color: #418FDE;
 }
@@ -56,7 +54,16 @@ nav a:hover {
 nav a:link,
 nav a:visited {
   text-decoration: none;
+  color: white;
 }
+
+/* hero banner */
+.hero-banner {
+  background-image: url("../assets/images/02-hero-bg.jpg");
+  height:max-content;
+  width: 100%;
+}
+
 
 /* about-me */
 
@@ -70,17 +77,19 @@ nav a:visited {
 
 .sub-heading-text {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 25px;
+  font-size: 40px;
   font-weight: bolder;
-  border-right: solid black;
+  border-right: solid #2477cb;
   border-width: thin medium;
   padding: 10px;
   margin: 5px;
+  color: #1168bf;
 }
 
 .sub-heading-description {
   font-size: 18px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #2477cb;
 }
 
 /* portfolio container */
@@ -108,38 +117,65 @@ nav a:visited {
 #Surf-Report {
   grid-area: Surf-Report;
   background-image: url("../assets/images/02-portfolio-4.jpg");
+  opacity: 0.8;
 }
 
 #LED-Wall {
   grid-area: LED-Wall;
   background-image: url("../assets/images/02-portfolio-1.jpg");
+  opacity: 0.8;
 }
 
 #Calculator {
   grid-area: Calculator;
   background-image: url("../assets/images/02-portfolio-2.jpg");
+  opacity: 0.8;
 }
 
 #Pastel-Puzzles {
   grid-area: Pastel-Puzzles;
   background-image: url("../assets/images/02-portfolio-3.jpg");
+  opacity: 0.8;
 }
 
 
 #Run-Buddy {
   grid-area: Run-Buddy;
   background-image: url("../assets/images/02-run-buddy.jpg");
+  opacity: 0.8;
 }
 
 .WorkGridArea {
   background-position: center;
+  border: 5px solid skyblue;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 5px;
+  margin: 10px;
   cursor: pointer;
   align-content: end;
-  border-color: skyblue;
-  border-width: 100px;
+  position: relative;
+}
+
+.WorkGridArea:hover{
+  color: yellow;
+  transition: 0.3s;
+}
+
+.portfolio-text {
+  background-color: skyblue;
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+
+.portfolio-text h3 {
+  font-weight: bolder;
+}
+
+.portfolio-text h4 {
+  font-weight: 200;
 }
 
 /* sub-heading */
@@ -148,7 +184,7 @@ nav a:visited {
   color: #418FDE;
   font-weight: bold;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   text-decoration: none;
   width: 100%;
