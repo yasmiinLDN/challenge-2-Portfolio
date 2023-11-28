@@ -175,9 +175,13 @@ nav a:visited {
   align-items: flex-end;
 }
 
-.WorkGridArea+img:hover {
-  color: yellow;
-  transition: 0.2s;
+a h3, h4 {
+  text-decoration: none;
+  color: black;
+  background-color: skyblue;
+  height: fit-content;
+  width: fit-content;
+  font-family: var(--font);
 }
 
 .portfolio-text {
@@ -218,6 +222,7 @@ nav a:visited {
   text-decoration: none;
 }
 
+
 /* media queries */
 
 @media only screen and (max-width:980px) {
@@ -251,7 +256,29 @@ nav a:visited {
   font-size: 20px;
 }
 
+.sub-heading img {
+  border-radius: 5px;
+  max-width: 15%;
+  height: 15%;
+  padding: 10px;
+  margin: 10px;
 }
+
+}
+
+
+ @media only screen and (max-width:480px) {
+  .sub-heading img {
+    border-radius: 5px;
+    max-width: 30%;
+    height: 30%;
+    padding: 10px;
+    margin: 10px;
+  }
+
+}
+
+
 
 /*           <a href="./Previous-work/Flower_garden/Flower_garden.html"></a>
 */
