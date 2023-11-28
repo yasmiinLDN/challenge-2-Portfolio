@@ -6,7 +6,6 @@ body {
 }
 
 header {
-  padding: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: #a3c2e0;
   color: #418FDE;
@@ -18,7 +17,7 @@ header {
 header h1 {
   display: inline-block;
   font-size: 48px;
-  background-color: hsla(239, 91%, 26%, 0.15);
+  background-color: hsla(221, 91%, 26%, 0.15);
   padding: 0 10px 0 50px;
 }
 
