@@ -12,7 +12,7 @@ header {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: #a3c2e0;
   color: #418FDE;
-  position:sticky;
+  position: sticky;
   z-index: +1;
   top: 0.5px;
 }
@@ -20,6 +20,8 @@ header {
 header h1 {
   display: inline-block;
   font-size: 48px;
+  background-color: hsla(239, 91%, 26%, 0.15);
+  padding: 0 10px 0 50px;
 }
 
 header h1 .n-Ib {
@@ -60,8 +62,21 @@ nav a:visited {
 /* hero banner */
 .hero-banner {
   background-image: url("../assets/images/02-hero-bg.jpg");
-  height:max-content;
+  height: max-content;
   width: 100%;
+  height: 150px;
+  background-size: cover;
+  position:relative;
+}
+
+.hero-banner h2 {
+  color: white;
+  font-size: 48px;
+  background-color: hsla(290,60%,70%,0.5);
+  padding: 0 10px 0 50px;
+  position: absolute;
+  bottom: 0;
+  right:0;
 }
 
 
@@ -156,7 +171,7 @@ nav a:visited {
   position: relative;
 }
 
-.WorkGridArea:hover{
+.WorkGridArea:hover {
   color: yellow;
   transition: 0.3s;
 }
