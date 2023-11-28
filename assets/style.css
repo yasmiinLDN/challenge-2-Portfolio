@@ -175,20 +175,12 @@ nav a:visited {
   align-items: flex-end;
 }
 
-a h3, h4 {
-  text-decoration: none;
-  color: black;
+.portfolio-text, a h3, a h4 {
   background-color: skyblue;
   height: fit-content;
   width: fit-content;
   font-family: var(--font);
-}
-
-.portfolio-text {
-  background-color: skyblue;
-  height: fit-content;
-  width: fit-content;
-  font-family: var(--font);
+  color:black;
 }
 
 .portfolio-text h3 {
@@ -213,6 +205,8 @@ a h3, h4 {
   text-decoration-style: solidvar(--blue);
   text-underline-offset: 10px;
 }
+
+
 
 .sub-heading a:hover {
   color: #053769;
