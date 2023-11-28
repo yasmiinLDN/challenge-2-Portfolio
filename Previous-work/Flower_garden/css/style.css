@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Kaushan Script', cursive;
+}
+
+.header {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 20px;
+  height: 150px;
+  font-variant: small-caps;
+  text-align: center;
+  padding-top: 25px;
+  font-size: 3vw;
+  background-color: #04443C;
+  color: white;
+  text-shadow: 3px 3px gray;
+}
+
+
+.product {
+  width: 31.1%;
+  height: 400px;
+  float: left;
+  padding: 1%;
+  padding-top: 1.6%;
+  margin-left: 1.8%;
+  margin-bottom: 20px;
+  border: 1px solid;
+  box-shadow: 10px 10px #888888;
+  border-radius: 5px;
+  text-align: justify;
+}
+
+.product-image img {
+  width: 91.5%;
+  height: 170px;
+  border-radius: 5px;
+  display: block;
+  margin: auto auto;
+}
+
+figcaption {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2vw;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-variant: small-caps;
+}
+
+.product-description {
+  border: none;
+  ;
+  height: 100px;
+  padding: 0px 15px;
+  font-size: 1.5vw;
+}
+
+
+.footer {
+  text-align: center;
+  padding-top: 60px;
+  clear: both;
+  background-color: #04443C;
+  height: 150px;
+  font-variant: small-caps;
+  color: white;
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .product {
+    width: 98%;
+  }
+
+  .product-description {
+    font-size: 18px;
+    ;
+  }
+
+  figcaption {
+    font-size: 5vw;
+  }
+
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .product {
+    width: 98%;
+    height: 470px;
+
+  }
+
+  .product-image img {
+    height: 300px;
+  }
+
+  .product-description {
+    font-size: 18px;
+    ;
+  }
+
+  figcaption {
+    font-size: 3.5vw;
+  }
+
+}

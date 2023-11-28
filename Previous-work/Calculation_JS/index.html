@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Calculation </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <div id="box1"> <!-- whole form box start-->
+
+        <div id="resultbox"> <!-- result box start-->
+
+
+            <div id="show-result" style="display:none"> <!-- show-result box start-->
+                <h1 style="text-align: center;">RESULT</h1>
+
+            </div> <!--show-result box end-->
+
+        </div> <!--result box end -->
+
+
+
+        <div id="formbox"> <!--form box start-->
+
+            <div id="databox"> <!-- data box start-->
+
+                <form> <!--main form start-->
+                    <label for="proprice">Price<br><input type="number" id="proprice"></label><br><br>
+
+                    <label for="proqty">Quantity<br><input type="number" id="proqty"></label><br><br>
+
+                    <label for="prodiscount">Discount %<br><input type="number" id="prodiscount"></label><br><br>
+
+                    <label for="provat">VAT %<br><input type="number" id="provat"></label><br><br>
+
+                    <label for="totalprice">Total<br><input type="number" id="totalprice"></label><br>
+
+                    <input type="button" class="buttons" value="Get Total" onclick="total()">
+                </form> <!--main form end-->
+
+            </div> <!--data box end-->
+
+        </div> <!--form box end -->
+
+
+    </div> <!--whole form end -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
