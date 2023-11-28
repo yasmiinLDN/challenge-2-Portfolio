@@ -120,16 +120,16 @@ nav a:visited {
   margin: 0px 3%;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    "Surf-Report Surf-Report"
-    "Surf-Report Surf-Report"
-    "Surf-Report Surf-Report"
+    "Flower-Garden Flower-Garden"
+    "Flower-Garden Flower-Garden"
+    "Flower-Garden Flower-Garden"
     "LED-Wall Calculator"
     "Pastel-Puzzles Run-Buddy";
 }
 
-#Surf-Report {
-  grid-area: Surf-Report;
-  background-image: url("../assets/images/02-portfolio-4.jpg");
+#Flower-Garden {
+  grid-area: Flower-Garden;
+  background-image: url("../assets/images/flower-garden.png");
   opacity: 0.8;
 }
 
@@ -141,7 +141,7 @@ nav a:visited {
 
 #Calculator {
   grid-area: Calculator;
-  background-image: url("../assets/images/02-portfolio-2.jpg");
+  background-image: url("../assets/images/cost-calculator.png");
   opacity: 0.8;
 }
 
@@ -223,9 +223,9 @@ nav a:visited {
   #WorkGrid {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "Surf-Report"
-      "Surf-Report"
-      "Surf-Report"
+      "Flower-Garden"
+      "Flower-Garden"
+      "Flower-Garden"
       "LED-Wall"
       "Calculator"
       "Pastel-Puzzles"
@@ -246,3 +246,6 @@ nav a:visited {
 }
 
 }
+
+/*           <a href="./Previous-work/Flower_garden/Flower_garden.html"></a>
+*/
