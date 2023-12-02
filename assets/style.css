@@ -1,9 +1,20 @@
-/* STARTER CODE BELOW */
+/* A.HOOSE */
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Y.HOOSE */
 
 :root {
   --blue: #418FDE;
   --font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   --opacity: 0.8;
+  --bordercolour: #a3c2e0;
 }
 
 body {
@@ -12,9 +23,13 @@ body {
 }
 
 header {
-  font-family: var(--font);
-  background-color: #a3c2e0;
   color: var(--blue);
+  height: 90px;
+  width: 100%;
+  background: #a3c2e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: sticky;
   z-index: +1;
   top: 0.5px;
@@ -35,8 +50,7 @@ header nav {
   padding-top: 10px;
   margin-right: 20px;
   float: right;
-  font-family: var(--font);
-  font-size: 25px;
+  font-size: 20px;
 }
 
 header nav ul li {
@@ -48,12 +62,12 @@ header nav ul li {
 }
 
 nav a:visited {
-  color:var(--blue);
+  color: var(--blue);
 }
 
 nav a:hover {
   color: white;
-  background-color:var(--blue);
+  background-color: var(--blue);
 }
 
 nav a:link,
@@ -61,6 +75,7 @@ nav a:visited {
   text-decoration: none;
   color: white;
 }
+
 
 /* hero banner */
 .hero-banner {
@@ -75,7 +90,7 @@ nav a:visited {
 .hero-banner h2 {
   color: white;
   font-size: 48px;
-  background-color: hsla(290, 60%, 70%, 0.5);
+  background-color: hsla(188, 76%, 65%, 0.4);
   padding: 0 10px 0 50px;
   position: absolute;
   bottom: 0;
@@ -83,196 +98,218 @@ nav a:visited {
 }
 
 
-/* about-me */
+/* A.HOOSE */
 
-.sub-heading {
-  display: flex;
-  flex-direction: row;
-  height: 95%;
-  width: 95%;
-  padding: 10px;
+/* about me section styling */
+#heading-two {
+  color: var(--blue);
+  font-size: 30px;
+  margin-left: 160px;
+  margin-top: 30px;
 }
 
-.sub-heading img {
+#heading-three {
+  color: var(--blue);
+  font-size: 30px;
+  margin-left: 160px;
+  margin-top: 30px;
+}
+
+p {
+  line-height: 1.5;
+  word-spacing: 0.35rem;
+  padding-left: 30px;
+  border-left: thick solid var(--bordercolour);
+  color:var(--blue)
+}
+
+img {
   border-radius: 5px;
-  max-width: 8%;
+  max-width: 30%;
   height: auto;
   padding: 10px;
-  margin: 10px;
+  margin-left: 180px;
 }
 
-.sub-heading-text {
-  font-family: var(--font);
-  font-size: 30px;
-  font-weight: bolder;
-  border-right: solid #2477cb;
-  border-width: thin medium;
-  color: #1168bf;
-  position: relative;
-}
+/* My work section styling */
 
-.sub-heading-description {
-  font-size: 18px;
-  font-family: var(--font);
-  color: #2477cb;
-}
-
-/* portfolio container */
-
-#WorkGrid {
-  flex-grow: 25;
-  height: 700px;
+#My-Work {
+  height: 80vh;
+  padding-left: 30px;
+  border-left: thick solid var(--bordercolour);
   display: grid;
-  margin: 0px 3%;
+  gap: 1rem;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    "Flower-Garden Flower-Garden"
-    "Flower-Garden Flower-Garden"
-    "Flower-Garden Flower-Garden"
-    "LED-Wall Calculator"
-    "Pastel-Puzzles Run-Buddy";
-}
-
-#Flower-Garden {
-  grid-area: Flower-Garden;
-  background-image: url("../assets/images/flower-garden.png");
-  opacity: var(--opacity);
-}
-
-#LED-Wall {
-  grid-area: LED-Wall;
-  background-image: url("../assets/images/02-portfolio-1.jpg");
-  opacity: var(--opacity);
-}
-
-#Calculator {
-  grid-area: Calculator;
-  background-image: url("../assets/images/cost-calculator.png");
-  opacity: var(--opacity);
-}
-
-#Pastel-Puzzles {
-  grid-area: Pastel-Puzzles;
-  background-image: url("../assets/images/02-portfolio-3.jpg");
-  opacity: var(--opacity);
+    'flower-garden flower-garden'
+    'flower-garden flower-garden'
+    'calculator-js projectthree'
+    'projectfour projectfive';
 }
 
 
-#Run-Buddy {
-  grid-area: Run-Buddy;
-  background-image: url("../assets/images/02-run-buddy.jpg");
-  opacity: var(--opacity);
-}
-
-.WorkGridArea {
-  background-position: center;
-  border: 5px solid skyblue;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 10px;
-  cursor: pointer;
+.project {
+  height: 100%;
+  padding: 30px;
+  border: thick solid #a3c2e0;
+  text-decoration: none;
+  color: white;
   display: flex;
   align-items: flex-end;
+  justify-content: flex-start;
 }
 
-.portfolio-text, a h3, a h4 {
-  background-color: skyblue;
-  height: fit-content;
-  width: fit-content;
-  font-family: var(--font);
-  color:black;
+.text {
+  background-color: #a3c2e0;
+  width: 40%;
+  padding: 10px 0 10px 0;
 }
 
-.portfolio-text h3 {
-  font-weight: bolder;
+.textone {
+  background-color: #a3c2e0;
+  width: 15%;
+  padding: 10px 0 10px 0;
+
 }
 
-.portfolio-text h4 {
-  font-weight: 200;
+.project:hover {
+  transform: scale(1.05);
 }
 
-/* sub-heading */
 
-.sub-heading a {
-  color:var(--blue);
-  font-weight: bold;
-  font-family: var(--font);
+
+
+#flower-garden {
+  grid-area: flower-garden;
+  background: url(./images/flower-garden.png) center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+
+#calculator-js {
+  grid-area: calculator-js;
+  background: url(./images/cost-calculator.png) center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+#projectthree {
+  grid-area: projectthree;
+  background: url(./images/coming-soon1.jpeg) center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+#projectfour {
+  grid-area: projectfour;
+  background: url(./images/coming-soon1.jpeg) center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+#projectfive {
+  grid-area: projectfive;
+  background: url(./images/coming-soon1.jpeg) center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.section {
+  display: flex;
+  gap: 2rem;
+  border-left:thick;
+  border-color: (--bordercolour);
+}
+
+.section-heading {
+
+  flex: 0 0 300px;
+}
+
+.section-content {
+  flex: 1;
+  margin: 40px 80px 40px 0;
+}
+
+/* footer styling */
+
+footer h3 {
+  font-size: 30px;
+  color: var(--blue);
+  margin-top: 60px;
+  margin-left: 15px;
+}
+
+
+#footer {
   font-size: 20px;
-  text-align: center;
+  color: #418FDE;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 0 30px 30px;
+  border-left: thick solid var(--bordercolour);
+}
+
+footer a {
+  margin: 20px;
   text-decoration: none;
-  width: 100%;
-  text-decoration-line: underline;
-  text-decoration-style: solidvar(--blue);
-  text-underline-offset: 10px;
+  font-family: var(--fonttype);
+  color: var(--blue);
 }
 
-
-
-.sub-heading a:hover {
-  color: #053769;
+footer a:hover {
+  font-size: 30px;
+  color: white;
+  background-color: var(--blue);
 }
-
-.sub-heading a:visited {
-  text-decoration: none;
-}
-
 
 /* media queries */
-
-@media only screen and (max-width:980px) {
-
-  .header {
-    position: static;
+@media only screen and (max-width:900px) {
+  .textone {
+    background-color: #abdbe3;
+    width: 35%;
+    padding: 10px 0 10px 0;
   }
 
-  #WorkGrid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "Flower-Garden"
-      "Flower-Garden"
-      "Flower-Garden"
-      "LED-Wall"
-      "Calculator"
-      "Pastel-Puzzles"
-      "Run-Buddy";
+  .text {
+    background-color: #abdbe3;
+    width: 100%;
+    font-size: 13px;
   }
+}
 
-  .sub-heading img {
-    min-height: auto;
-    min-width: auto;
-  }
 
-  header nav {
+@media only screen and (max-width:700px) {
+  li {
     display: none;
   }
-
-.sub-heading a {
-  font-size: 20px;
 }
 
-.sub-heading img {
-  border-radius: 5px;
-  max-width: 15%;
-  height: 15%;
-  padding: 10px;
-  margin: 10px;
-}
+@media only screen and (max-width:600px) {
+  .section-content {
+    margin: 20px 0 20px 0;
+  }
 
-}
+  p {
+    line-height: 1.0;
+    padding-left: 20px;
+    border-left: thick solid var(--bordercolour);
+  }
 
-
- @media only screen and (max-width:480px) {
-  .sub-heading img {
-    border-radius: 5px;
-    max-width: 30%;
-    height: 30%;
-    padding: 10px;
-    margin: 10px;
+  footer div a {
+    text-decoration: none;
+    font-family: var(--fonttype);
+    color: var(--blue);
+    font-size: 15px;
   }
 
 }
-
-
-
-/*           <a href="./Previous-work/Flower_garden/Flower_garden.html"></a>
-*/
